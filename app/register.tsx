@@ -1,3 +1,4 @@
+// /app/register.jsx
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, ScrollView } from 'react-native';
 import { useState } from 'react';
 import { useRouter } from 'expo-router';

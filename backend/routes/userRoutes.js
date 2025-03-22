@@ -2,6 +2,7 @@
 const express = require("express");
 const User = require("../models/User");
 const Investment = require("../models/Investment");
+const Bond = require("../models/Bonds");
 
 const router = express.Router();
 
@@ -14,8 +15,8 @@ router.post("/register", async (req, res) => {
       password,
       income,
       rent,
-      education,
-      healthcare,
+      educationExpenses,
+      healthcareExpenses,
       otherExpenses,
       savingsPercentage
     } = req.body;
@@ -29,8 +30,8 @@ router.post("/register", async (req, res) => {
       password,
       income,
       rent,
-      education,
-      healthcare,
+      educationExpenses,
+      healthcareExpenses,
       otherExpenses,
       savingsPercentage
     });
@@ -40,6 +41,7 @@ router.post("/register", async (req, res) => {
     req.session.userId = user._id;
     res.json({ message: "User registered successfully!", user });
   } catch (error) {
+    console.error("Registration Error:", error);
     res.status(500).json({ error: error.message });
   }
 });
@@ -79,7 +81,34 @@ router.get("/overview", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+router.post('/invest', async (req, res) => {
+  try {
+    const newBond = new Bond(req.body);
+    await newBond.save();
+    res.status(201).json({ message: 'Investment saved successfully!' });
+  } catch (error) {
+    res.status(500).json({ error: 'Investment failed!' });
+  }
+});
 
+router.get("/bonds", async (req, res) => {
+  try {
+    const bonds = await Bond.find(); // Get all bonds
+    res.json(bonds);
+  } catch (error) {
+    console.error("Error fetching bonds:", error);
+    res.status(500).json({ error: "Failed to fetch investments" });
+  }
+});
+
+router.get('/investments', async (req, res) => {
+  try {
+    const investments = await Investment.find();
+    res.json(investments);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch investments' });
+  }
+});
 
 // ✅ Logout
 router.post("/logout", (req, res) => {
