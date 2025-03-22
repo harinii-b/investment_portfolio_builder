@@ -24,7 +24,7 @@ export default function LoginScreen() {
 
       console.log("Response:", response.data);
 
-      Alert.alert("Success", "Login successful!", [{ text: "OK", onPress: () => router.push("/dashboard") }]);
+      Alert.alert("Success", "Login successful!", [{ text: "OK", onPress: () => router.push("/steps/Dashboard") }]);
 
     } catch (error: any) {
       console.error("Error:", error);
@@ -35,7 +35,7 @@ export default function LoginScreen() {
   return (
     <View style={styles.container}>
       {/* Back to Home Button */}
-      <TouchableOpacity style={styles.backButton} onPress={() => router.push('/')}>
+      <TouchableOpacity style={styles.backButton} onPress={() => router.push('/home')}>
         <Text style={styles.backButtonText}>← Back to Home</Text>
       </TouchableOpacity>
 
