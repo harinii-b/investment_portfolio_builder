@@ -1,79 +1,69 @@
 # 🌱 Ethical Investment Portfolio Builder
 
-> Personalized, ESG-focused financial planning and investment recommendation system
+> A basic tool to help users plan for future expenses and explore sustainable investment options
 
-The **Ethical Investment Portfolio Builder** is a full-stack application that empowers users to build a financially sound and sustainable future. It helps users plan their investments based on personal income, expenses, and life goals while prioritizing ethical and ESG-compliant (Environmental, Social, Governance) assets.
+This project is an early-stage investment planner that helps users estimate future financial needs and get simple, ESG-aware investment suggestions. It’s built with a focus on ethical investing—prioritizing companies and funds that align with environmental, social, and governance (ESG) values.
 
-## 🚀 Features
+## 🚀 What It Does
 
-### 👤 User Profile & Financial Intake
+### 👤 User Financial Profile
 
-- Secure registration and authentication (with email verification & password hashing)
-- Financial profile setup with:
-  - Salary & living expenses
-  - EMI/loan obligations
-  - Savings preference
-  - Risk tolerance level
+- Users can sign up and fill in:
+  - Salary
+  - Living expenses
+  - EMI/loan amounts
+  - How much they want to save
+  - Risk tolerance (low, medium, high)
   - ESG category preferences
 
-### 📊 Personalized Financial Planning
+### 📊 Future Expense Estimation
 
-- Predicts future expenses for:
+- Predicts future costs for:
   - 🎓 Education
   - 🏥 Healthcare
   - 💍 Marriage
   - 👵 Retirement
-- Uses inflation-adjusted projections powered by APIs like:
+- Adjusts projections using basic inflation data from APIs like:
   - [FRED](https://fred.stlouisfed.org/)
   - [World Bank](https://data.worldbank.org/)
   - [OECD](https://data.oecd.org/)
 
-### 🌍 ESG Investment Recommendations
+### 🌍 ESG Investment Suggestions
 
-- Fetches real-time data from:
-  - [Alpha Vantage](https://www.alphavantage.co/) (ETFs, Stocks, Bonds)
-  - Refinitiv ESG API (Sustainability scores)
-  - OpenSustainability / Carbon Interface (Impact data)
+- Pulls basic data from:
+  - [Alpha Vantage](https://www.alphavantage.co/)
+  - Refinitiv ESG (if available)
+  - Other public sustainability datasets
 - Filters options based on:
-  - ESG score thresholds
-  - Risk appetite
+  - Risk level
+  - ESG scores (if available)
   - Time horizon
-- Suggests optimal investment splits:
-  | Investment Type | Allocation | Time Horizon | Risk | Return |
-  |----------------------|------------|---------------|-------|----------|
-  | Green Bonds | 40% | 10+ years | Low | 6–8% |
-  | Sustainable ETFs | 30% | 5–10 years | Medium| 8–12% |
-  | ESG Stocks | 20% | 2–5 years | High | 12–20% |
-  | Fixed Deposits (FDs) | 10% | Liquid | Very Low | 4–6% |
 
-### 📈 Dashboard & Visualization
+📌 Example suggested portfolio split (based on risk):
 
-- Real-time visual insights on:
-  - Portfolio growth
-  - Expense coverage over time
-  - Asset allocation & sustainability score
-- Interactive charts: line, bar, pie, area graphs for performance & planning
+| Investment Type    | % Allocation | Risk     |
+| ------------------ | ------------ | -------- |
+| Green Bonds        | 40%          | Low      |
+| Sustainable ETFs   | 30%          | Medium   |
+| ESG Stocks         | 20%          | High     |
+| FDs or Safe Assets | 10%          | Very Low |
 
-### 🔔 Notifications & Reports
+### 📈 Simple Dashboard
 
-- Alerts for:
-  - Market volatility
-  - Rebalancing suggestions
-  - New ESG opportunities
-- Exportable reports:
-  - Investment strategy report
-  - Sustainability impact analysis
-  - Goal coverage summary
+- Basic views showing:
+  - Monthly investment amount
+  - Predicted growth over time
+  - ESG score summary (if available)
 
 ---
 
 ## 🛠 Tech Stack
 
-| Layer         | Technologies                                                       |
-| ------------- | ------------------------------------------------------------------ |
-| **Frontend**  | React / React Native (for future mobile support)                   |
-| **Backend**   | FastAPI, Python                                                    |
-| **Database**  | MongoDB                                                            |
-| **APIs Used** | Alpha Vantage, Refinitiv ESG, World Bank, FRED, OpenSustainability |
+| Part      | Tech                                  |
+| --------- | ------------------------------------- |
+| Frontend  | (Planned) React                       |
+| Backend   | FastAPI, Python                       |
+| Database  | MongoDB                               |
+| APIs Used | Alpha Vantage, FRED, World Bank, etc. |
 
 ---
