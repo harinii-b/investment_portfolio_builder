@@ -1,51 +1,79 @@
-# Welcome to your Expo app 👋
+# 🌱 Ethical Investment Portfolio Builder
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> Personalized, ESG-focused financial planning and investment recommendation system
 
-## Get started
+The **Ethical Investment Portfolio Builder** is a full-stack application that empowers users to build a financially sound and sustainable future. It helps users plan their investments based on personal income, expenses, and life goals while prioritizing ethical and ESG-compliant (Environmental, Social, Governance) assets.
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+### 👤 User Profile & Financial Intake
 
-2. Start the app
+- Secure registration and authentication (with email verification & password hashing)
+- Financial profile setup with:
+  - Salary & living expenses
+  - EMI/loan obligations
+  - Savings preference
+  - Risk tolerance level
+  - ESG category preferences
 
-   ```bash
-    npx expo start
-   ```
+### 📊 Personalized Financial Planning
 
-In the output, you'll find options to open the app in a
+- Predicts future expenses for:
+  - 🎓 Education
+  - 🏥 Healthcare
+  - 💍 Marriage
+  - 👵 Retirement
+- Uses inflation-adjusted projections powered by APIs like:
+  - [FRED](https://fred.stlouisfed.org/)
+  - [World Bank](https://data.worldbank.org/)
+  - [OECD](https://data.oecd.org/)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 🌍 ESG Investment Recommendations
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Fetches real-time data from:
+  - [Alpha Vantage](https://www.alphavantage.co/) (ETFs, Stocks, Bonds)
+  - Refinitiv ESG API (Sustainability scores)
+  - OpenSustainability / Carbon Interface (Impact data)
+- Filters options based on:
+  - ESG score thresholds
+  - Risk appetite
+  - Time horizon
+- Suggests optimal investment splits:
+  | Investment Type | Allocation | Time Horizon | Risk | Return |
+  |----------------------|------------|---------------|-------|----------|
+  | Green Bonds | 40% | 10+ years | Low | 6–8% |
+  | Sustainable ETFs | 30% | 5–10 years | Medium| 8–12% |
+  | ESG Stocks | 20% | 2–5 years | High | 12–20% |
+  | Fixed Deposits (FDs) | 10% | Liquid | Very Low | 4–6% |
 
-## Get a fresh project
+### 📈 Dashboard & Visualization
 
-When you're ready, run:
+- Real-time visual insights on:
+  - Portfolio growth
+  - Expense coverage over time
+  - Asset allocation & sustainability score
+- Interactive charts: line, bar, pie, area graphs for performance & planning
 
-```bash
-npm run reset-project
-```
+### 🔔 Notifications & Reports
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Alerts for:
+  - Market volatility
+  - Rebalancing suggestions
+  - New ESG opportunities
+- Exportable reports:
+  - Investment strategy report
+  - Sustainability impact analysis
+  - Goal coverage summary
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🛠 Tech Stack
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+| Layer         | Technologies                                                       |
+| ------------- | ------------------------------------------------------------------ |
+| **Frontend**  | React / React Native (for future mobile support)                   |
+| **Backend**   | FastAPI, Python                                                    |
+| **Database**  | MongoDB                                                            |
+| **APIs Used** | Alpha Vantage, Refinitiv ESG, World Bank, FRED, OpenSustainability |
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-hello
+---
