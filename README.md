@@ -39,15 +39,6 @@ This project is an early-stage investment planner that helps users estimate futu
   - ESG scores (if available)
   - Time horizon
 
-📌 Example suggested portfolio split (based on risk):
-
-| Investment Type    | % Allocation | Risk     |
-| ------------------ | ------------ | -------- |
-| Green Bonds        | 40%          | Low      |
-| Sustainable ETFs   | 30%          | Medium   |
-| ESG Stocks         | 20%          | High     |
-| FDs or Safe Assets | 10%          | Very Low |
-
 ### 📈 Simple Dashboard
 
 - Basic views showing:
